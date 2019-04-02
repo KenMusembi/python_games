@@ -12,7 +12,7 @@ def talkToMe(audio):
 
     print(audio)
     for line in audio.splitlines():
-        os.system("say " + audio)
+        os.system(audio)
 
     #  use the system's inbuilt say command instead of mpg123
     #  text_to_speech = gTTS(text=audio, lang='en')
@@ -46,9 +46,9 @@ def myCommand():
 def assistant(command):
     "if statements for executing commands"
 
-    if 'open reddit' in command:
+    if 'fungua browser' in command:
         reg_ex = re.search('open reddit (.*)', command)
-        url = 'https://www.reddit.com/'
+        url = 'https://www.google.com/'
         if reg_ex:
             subreddit = reg_ex.group(1)
             url = url + 'r/' + subreddit
@@ -127,7 +127,7 @@ def assistant(command):
             talkToMe('Email sent.')
 
         else:
-            talkToMe('I don\'t know what you mean!')
+            talkToMe('Please reapeat!')
 
 
 talkToMe('I am ready for your command')

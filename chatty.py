@@ -8,17 +8,18 @@ import win32com.client as wincl
 speak = wincl.Dispatch("SAPI.SpVoice")
 
 #start the conversation
-print('Hi mate!') #greeting
-speak.Speak('Hi mate!')
+print('Habari!') #greeting
+speak.Speak('Habari!')
+
 
 #keep going the conversation
-print('Whats your name?') #ask
-speak.Speak('Whats your name?')
+print('Unaitwa aje?') #ask
+speak.Speak('Unaitwa aje?')
 Name = input() #save answer
-print('Im glad to meet you, ' + Name + '!!') #reply
-speak.Speak('Im glad to meet you, ' + Name + '!!')
-print('The number of letters of your name is:')
-speak.Speak('The number of letters of your name is:')
+print('Nafurahi kukuona, ' + Name + '!!') #reply
+speak.Speak('Nafurahi kukuona, ' + Name + '!!')
+print('Type something in swahili:')
+speak.Speak('jina lako lina urefu wa:')
 print(len(Name))
 speak.Speak(len(Name))
 
